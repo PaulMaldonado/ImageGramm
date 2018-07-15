@@ -1,0 +1,9 @@
+<%= form_with model: @pic do |f| %>
+  <%= f.label :title, "Titulo" %>
+  <%= f.text_field :title %>
+
+  <%= f.label :description, "Descripción" %>
+  <%= f.text_field :description %>
+
+  <%= f.submit "Guardar" %>
+<% end %>
