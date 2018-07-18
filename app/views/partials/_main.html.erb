@@ -4,6 +4,8 @@
         <a><%= link_to "ImageGramm", root_path, class: "brand-logo" %></a>
         <ul class="right hide-on-med-and-down">
           <% if user_signed_in? %>
+            <li><a><%= link_to "Nueva pic", new_pic_path %></a></li>
+            <li><a><%= link_to "Configuración", edit_user_registration_path %></a></li>
             <li><a><%= link_to "Cerrar sesión", destroy_user_session_path, method: :delete %></a></li>
           <% else %>
             <li><a><%= link_to "Crear cuenta", new_user_registration_path %></a></li>

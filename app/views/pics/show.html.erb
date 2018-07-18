@@ -7,3 +7,8 @@
 </p>
 
 <p>Creado por: <%= current_user.username %></p>
+
+<% if user_signed_in? %>
+  <%= link_to "Editar", edit_pic_path %>
+  <%= link_to "Eliminar", pic_path, method: :delete, data: { confirm: "Seguro que decea eliminarlo?" } %>
+<% end %>
