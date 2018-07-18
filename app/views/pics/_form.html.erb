@@ -1,4 +1,6 @@
-<%= form_with model: @pic do |f| %>
+<%= form_with model: @pic, html: { multipart: true } do |f| %>
+  <%= f.file_field :image %>
+
   <%= f.label :title, "Titulo" %>
   <%= f.text_field :title %>
 
