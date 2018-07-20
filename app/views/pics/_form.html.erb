@@ -1,12 +1,31 @@
-<%= form_with model: @pic, html: { multipart: true } do |f| %>
-  <%= f.label :image %>
-  <%= f.file_field :image %>
+<div class="container">
+  <div class="card-panel z-depth-3">
+    <%= form_with model: @pic, html: { multipart: true } do |f| %>
+    <h2><%= name %> Pic</h2>
+    <div class="row">
+      <div class="input-field col s12">
+        <span>Archivo</span>
+        <%= f.file_field :image %>
+      </div>
+    </div>
 
-  <%= f.label :title, "Titulo" %>
-  <%= f.text_field :title %>
+    <div class="row">
+      <div class="input-field col s12">
+        <%= f.label :title, "Titulo de la publicación" %>
+        <%= f.text_field :title %>
+      </div>
+    </div>
 
-  <%= f.label :description, "Descripción" %>
-  <%= f.text_field :description %>
+    <div class="row">
+      <div class="input-field col s12">
+        <%= f.label :description, "Descripción" %>
+        <%= f.text_area :description, class: "materialize-textarea" %>
+      </div>
+    </div>
 
-  <%= f.submit "Guardar" %>
-<% end %>
+    <div class="row">
+      <%= f.submit "Guardar", class: "btn" %>
+    </div>
+    <% end %>
+  </div>
+</div>
