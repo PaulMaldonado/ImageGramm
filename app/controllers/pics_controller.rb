@@ -3,7 +3,7 @@ class PicsController < ApplicationController
   before_action :authenticate_user!, except: [:index, :show]
 
   def index
-    @pics = Pic.all.order("created_at DESC")
+    @pics = Pic.where(user_id: current_user)
   end
 
   def new
@@ -29,7 +29,7 @@ class PicsController < ApplicationController
   end
 
   def update
-    @pic = Pic.update(pic_params)
+    @pic = current_user.pics.build(pic_params)
 
     if @pic.save
       redirect_to @pic
