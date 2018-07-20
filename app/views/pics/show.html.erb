@@ -3,11 +3,11 @@
     <%= image_tag @pic.image.url, class: "images-show" %>
 
     <p>
-      <span class="image-title">Titulo: <%= @pic.title %></span>
+      <span class="image-title"><%= @pic.title %></span>
     </p>
 
     <p>
-      <span class="image-description">Descripción: <%= @pic.description %></span>
+      <span class="image-description"><%= @pic.description %></span>
     </p>
 
     <p class="image-create-by">Creado por: <%= current_user.username %></p>
