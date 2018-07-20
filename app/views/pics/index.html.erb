@@ -3,8 +3,19 @@
   <br><br>
 </div>
 
+
+<% @pics.each do |pic| %>
 <div class="container">
-    <% @pics.each do |pic| %>
-      <p><%= link_to image_tag pic.image.url(:medium), class: "images" %></p>
-    <% end %>
-</div>
+    <div class="col s12 m6">
+      <div class="card z-depth-3">
+        <div class="card-image">
+          <%= link_to (image_tag pic.image.url), pic, class: "images" %>
+          <span class="card-title"><%= pic.title %></span>
+        </div>
+        <div class="card-content">
+          <p><%= pic.description %></p>
+        </div>
+      </div>
+    </div>
+  </div>
+<% end %>

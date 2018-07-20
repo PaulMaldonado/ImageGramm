@@ -1,16 +1,21 @@
-<%= image_tag @pic.image.url(:medium) %>
+<div class="container">
+  <div class="card-panel z-depth-3">
+    <%= image_tag @pic.image.url, class: "images-show" %>
 
-<p>
-  <span>Titulo: <%= @pic.title %></span>
-</p>
+    <p>
+      <span class="image-title">Titulo: <%= @pic.title %></span>
+    </p>
 
-<p>
-  <span>Descripción: <%= @pic.description %></span>
-</p>
+    <p>
+      <span class="image-description">Descripción: <%= @pic.description %></span>
+    </p>
 
-<p>Creado por: <%= current_user.username %></p>
+    <p class="image-create-by">Creado por: <%= current_user.username %></p>
+    <br>
 
-<% if user_signed_in? %>
-  <%= link_to "Editar", edit_pic_path %>
-  <%= link_to "Eliminar", pic_path, method: :delete, data: { confirm: "Seguro que decea eliminarlo?" } %>
-<% end %>
+    <% if user_signed_in? %>
+      <%= link_to "Editar", edit_pic_path, class: "btn blue darken-3" %>
+      <%= link_to "Eliminar", pic_path, class: "btn red darken-4", method: :delete, data: { confirm: "Seguro que decea eliminarlo?" } %>
+    <% end %>
+  </div>
+</div>
