@@ -41,7 +41,7 @@ class PicsController < ApplicationController
   def destroy
     @pic.destroy
 
-    redirect_to root_path
+    redirect_to pic_path
   end
 
   private
