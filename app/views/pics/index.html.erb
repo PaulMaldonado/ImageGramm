@@ -1,5 +1,10 @@
-<h1>Lista de pics</h1>
+<div class="container">
+  <h1 class="center">Lista de pics</h1>
+  <br><br>
+</div>
 
-<% @pics.each do |pic| %>
-  <p><%= link_to pic.title, pic %></p>
-<% end %>
+<div class="container">
+    <% @pics.each do |pic| %>
+      <p><%= link_to image_tag pic.image.url(:medium), class: "images" %></p>
+    <% end %>
+</div>

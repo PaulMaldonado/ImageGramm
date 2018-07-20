@@ -5,3 +5,10 @@
 .nav-wrapper {
   background-color: #303F9F;
 }
+
+.images {
+ min-width: 80%;
+ min-height: 60vh;
+ background-position: center;
+ background-size: cover;
+}
