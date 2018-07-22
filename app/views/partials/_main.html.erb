@@ -8,7 +8,7 @@
             <li><a><%= link_to "Configuración", edit_user_registration_path %></a></li>
             <li><a><%= link_to "Cerrar sesión", destroy_user_session_path, method: :delete %></a></li>
           <% else %>
-            <li><a><%= link_to "Iniciar sesión", new_user_session_path %></a></li>
+            <li><a><%= link_to "Iniciar sesión", new_user_session_path, class: "btn blue darken-2" %></a></li>
           <% end %>
         </ul>
       </div>
